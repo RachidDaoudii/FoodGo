@@ -2,6 +2,7 @@ import {  View, Text,Image, StyleSheet, Platform,TextInput,Pressable } from 'rea
 import { Colors } from '@/constants/Colors';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useFonts, Lobster_400Regular } from '@expo-google-fonts/lobster';
+import FoodItem from '@/components/food/foodItem';
 export default function HomeScreen() {
   let [fontsLoaded] = useFonts({
     Lobster_400Regular,
@@ -19,6 +20,9 @@ export default function HomeScreen() {
           </View>
         </View>
         <View>
+        <FoodItem/>
+        </View>
+        {/* <View>
           <View>
             <TextInput placeholder="User Nickname"/>
           </View>
@@ -26,7 +30,7 @@ export default function HomeScreen() {
           >
             <Ionicons style={styles.btn} name="filter" size={24} color="black" />
           </Pressable>
-        </View>
+        </View> */}
       </View>
   );
 }
